@@ -5,7 +5,13 @@ public abstract class BankAccount {
     protected double balance;
     protected Person accountHolder;
 
-    protected abstract void withdraw(double amount);
+    public BankAccount(long accountNumber, double balance, Person accountHolder) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.accountHolder = accountHolder;
+    }
+
+    protected abstract boolean withdraw(double amount);
     protected void deposit(double amount){
         balance += amount;
         System.out.println("Баланс пополнен");
