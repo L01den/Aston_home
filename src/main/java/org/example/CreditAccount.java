@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CreditAccount extends BankAccount implements TransactionFee{
+public class CreditAccount extends BankAccount implements TransactionFee, TransactionValidator{
     private double creditLimit = 5000.00;
 
     public CreditAccount(long accountNumber, double balance, Person accountHolder) {
@@ -14,15 +14,18 @@ public class CreditAccount extends BankAccount implements TransactionFee{
 
     @Override
     protected boolean withdraw(double amount) {
-        double fee = applyFee(amount);
-        if(balance + creditLimit >= amount + fee){
-            balance = fee - amount - balance;
-            System.out.println("Заберите деньги");
-            return true;
-        } else{
-            System.out.println("Недостаточно средств");
-            return false;
+        if(validate(amount)) {
+            double fee = applyFee(amount);
+            if (balance + creditLimit >= amount + fee) {
+                balance = fee - amount - balance;
+                System.out.println("Заберите деньги");
+                return true;
+            } else {
+                System.out.println("Недостаточно средств");
+                return false;
+            }
         }
+        return false;
     }
 
 
@@ -31,5 +34,11 @@ public class CreditAccount extends BankAccount implements TransactionFee{
     @Override
     public double applyFee(double amount) {
         return amount * 0.1;
+    }
+
+    @Override
+    public boolean validate(double amount) {
+        if(amount < 5000) return true;
+        return false;
     }
 }

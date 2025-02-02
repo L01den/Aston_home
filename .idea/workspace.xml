@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54508ed2-8be8-4930-b829-d341c2d3cf80" name="Changes" comment="All classes are made without tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TransactionProcessorTest.java" afterDir="false" />
+    <list default="true" id="54508ed2-8be8-4930-b829-d341c2d3cf80" name="Changes" comment="Added tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TransactionValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CreditAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CreditAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DebitAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DebitAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SavingsAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransactionProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TransactionProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransactionFee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TransactionFee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TransactionProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TransactionProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +70,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "Application.Main.executor": "Debug",
     "Application.main.executor": "Debug",
     "JUnit.TransactionProcessorTest.executor": "Run",
     "JUnit.TransactionProcessorTest.processTransaction.executor": "Run",
-    "JUnit.TransactionProcessorTest.processTransactionFalse.executor": "Debug",
+    "JUnit.TransactionProcessorTest.processTransactionFalse.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -95,9 +96,9 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TransactionProcessorTest">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+  <component name="RunManager" selected="JUnit.TransactionProcessorTest.validTrue">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="Homework_1" />
       <extension name="coverage">
         <pattern>
@@ -137,22 +138,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransactionProcessorTest.processTransaction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework_1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.TransactionProcessorTest" />
-      <option name="METHOD_NAME" value="processTransaction" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TransactionProcessorTest.processTransactionFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework_1" />
       <extension name="coverage">
@@ -169,13 +154,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransactionProcessorTest.validTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.TransactionProcessorTest" />
+      <option name="METHOD_NAME" value="validTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TransactionProcessorTest.validTrue" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TransactionProcessorTest" />
-        <item itemvalue="Application.main" />
         <item itemvalue="JUnit.TransactionProcessorTest.processTransactionFalse" />
-        <item itemvalue="JUnit.TransactionProcessorTest.processTransaction" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738505136195</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added tests">
+      <option name="closed" value="true" />
+      <created>1738514210222</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738514210222</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,15 +230,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added bank structure" />
     <MESSAGE value="All classes are made without tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="All classes are made without tests" />
+    <MESSAGE value="Added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CreditAccount.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/DebitAccount.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

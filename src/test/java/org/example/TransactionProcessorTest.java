@@ -32,6 +32,21 @@ public class TransactionProcessorTest {
         List<BankAccount> bankAccounts = new ArrayList<>(Arrays.asList(credit, debit, saving));
         TransactionProcessor transactionProcessor = new TransactionProcessor();
 
-        Assert.assertFalse(transactionProcessor.processTransaction(bankAccounts, 9000));
+        Assert.assertFalse(transactionProcessor.processTransaction(bankAccounts, 3000));
     }
+
+    @Test
+    public void validTrue() {
+        BankAccount debit = new DebitAccount(2l, 10000, new Person("Ivan", "Ivanov"));
+
+        Assert.assertTrue(debit.withdraw(9000));
+    }
+
+    @Test
+    public void validFalse() {
+        BankAccount credit = new CreditAccount(1l, 4000, new Person("Oleg", "Petrov"));
+
+        Assert.assertFalse(credit.withdraw(5000));
+    }
+
 }
